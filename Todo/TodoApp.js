@@ -5,7 +5,7 @@ const firstCardBody = document.querySelectorAll('.list-group')[0];
 const secondCardBody = document.querySelectorAll('.list-group')[1];
 const clearButton = document.querySelector('#clearButton');
 
-// Olayları başlat
+
 runEvents();
 
 function runEvents() {
@@ -13,14 +13,14 @@ function runEvents() {
 }
 
 function addTodo(e) {
-    e.preventDefault(); // Formun sayfayı yenilemesini engeller
+    e.preventDefault(); 
     const inputText = addInput.value.trim();
 
     if (inputText === "") {
         alert("Lütfen bir todo girin");
     } else {
-        addTodoToUI(inputText);        // Todo'yu arayüze ekle
-        addTodoToStorage(inputText);   // Todo'yu localStorage'a ekle
+        addTodoToUI(inputText);        
+        addTodoToStorage(inputText);   
     }
 }
 
@@ -40,8 +40,8 @@ function addTodoToUI(newTodo) {
     li.appendChild(a);
     todoList.appendChild(li);
 
-    addInput.value = "";  // Input temizle
-    addInput.focus();     // Input'a odaklan
+    addInput.value = "";  
+    addInput.focus();     
 }
 
 function addTodoToStorage(newTodo) {
